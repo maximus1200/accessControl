@@ -19,7 +19,7 @@
     <h1 id="home">Welcome to HKI</h1>
     <p>Access Control</p>
 
-    <!-- input field for chip -->
+    <!-- input field for transponder -->
     <form action="inc/transponder_check.php" method="POST">
       <div class="form-row">
         <div class="col-md-4 mb-3">

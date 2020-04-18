@@ -17,7 +17,7 @@
     
     <h1>Welcome to HKI</h1>
     <p>Access Control</p>
-    <p>Red</p>
+    <p>Nummer ist nicht korrekt, Transponder unbekannt.</p>
 
     <!-- Back to AC-Page Button (HIDDEN style tag) -->
     </div>

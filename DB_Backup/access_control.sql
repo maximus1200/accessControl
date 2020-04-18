@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 05. Apr 2020 um 20:48
+-- Erstellungszeit: 18. Apr 2020 um 15:53
 -- Server-Version: 10.4.8-MariaDB
 -- PHP-Version: 7.2.23
 
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `employee` (
   `ID` int(11) NOT NULL,
   `number` text NOT NULL,
+  `title` enum('Herr','Frau') NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `authorized` tinyint(1) NOT NULL,
@@ -41,12 +42,12 @@ CREATE TABLE `employee` (
 -- Daten für Tabelle `employee`
 --
 
-INSERT INTO `employee` (`ID`, `number`, `firstname`, `lastname`, `authorized`, `date`) VALUES
-(1, '44649', 'Kevin', 'Herbert', 1, '2020-03-28 19:07:38'),
-(2, '12354', 'Max', 'Mustermann', 0, '2020-03-28 19:07:38'),
-(3, '46385', 'John', 'Doe', 0, '2020-03-28 19:07:38'),
-(4, '07013', 'Jane', 'Doe', 1, '2020-03-28 19:07:38'),
-(5, '40440', 'Selina', 'Keplinger', 1, '2020-03-28 19:07:38');
+INSERT INTO `employee` (`ID`, `number`, `title`, `firstname`, `lastname`, `authorized`, `date`) VALUES
+(1, '44649', 'Herr', 'Kevin', 'Herbert', 1, '2020-03-28 19:07:38'),
+(2, '12354', 'Herr', 'Max', 'Mustermann', 0, '2020-03-28 19:07:38'),
+(3, '46385', 'Herr', 'John', 'Doe', 0, '2020-03-28 19:07:38'),
+(4, '07013', 'Frau', 'Jane', 'Doe', 1, '2020-03-28 19:07:38'),
+(5, '40440', 'Frau', 'Selina', 'Keplinger', 1, '2020-03-28 19:07:38');
 
 --
 -- Indizes der exportierten Tabellen

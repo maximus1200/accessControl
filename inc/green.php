@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <!-- Jumps back after two seconds to index.php -->
-    <meta http-equiv="refresh" content="2;../index.php" />
+    <!-- Jumps back after three seconds to index.php -->
+    <meta http-equiv="refresh" content="3;../index.php" />
 
     <!-- Bootstrap CSS and CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -21,9 +21,12 @@
     
 
     <?php
-      /*Echo the right name of the employee*/
-      echo 'Herzlich willkomnen Herr/Frau bla bla <br>';
-      echo 'Guten Morgen/Guten Tag/Schönen Abend Herr/Frau bla bla je nach Uhrzeit';
+      // Welcome text with title and lastname
+      // echo 'Guten Morgen/Guten Tag/Schönen Abend Herr/Frau bla bla je nach Uhrzeit';
+      session_start();
+      $title = $_SESSION['title'];
+      $lastname = $_SESSION['lastname'];
+      echo 'Herzlich willkommen ' . ' ' . $title . ' ' . $lastname . '.';
     ?>
 
     <!-- Back to AC-Page Button (HIDDEN style tag) -->
