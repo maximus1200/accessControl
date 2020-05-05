@@ -9,39 +9,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/admin.css">
 
-    <title>Access Control</title>
+    <title>Access Control - Admin Login</title>
   </head>
-    
-    <h1>Welcome to HKI</h1>
-    <p>Access Control</p>
+  <body>
 
-    <!-- Login -->
-  <form action="action_page.php" method="post">
-    <div class="imgcontainer">
-      <img src="image/user_cog.png" alt="Avatar" class="avatar">
-    </div>
+  <?php
+    require 'header.php';
+  ?>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+    <main>
+      <p>You are logged out!</p>
+      <p>You are logged in!</p>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <button type="submit" class="btn btn-outline-success">Login</button>
-          </div>
-            <div class="col">
-            <a href="index.php"><button type="button" class="btn btn-outline-danger" href="#home">Back to AC-Page</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
+    </main>
 
 
+  <?php
+    require 'footer.php';
+  ?>
+  
+ 
   
 
 

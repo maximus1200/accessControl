@@ -24,7 +24,7 @@
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="validationServer01">Employee Number:</label>
-          <input type="text" name="employee_number" class="form-control" id="employee_number" placeholder="Please hold transponder to the reader" require>
+          <input type="text" name="employee_number" class="form-control" id="employee_number" placeholder="Please hold transponder to the reader" required>
         </div>
       </div>
       </div>

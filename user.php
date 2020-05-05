@@ -4,35 +4,49 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- Jumps back after three seconds to index.php -->
-    <meta http-equiv="refresh" content="3;../index.php" />
 
     <!-- Bootstrap CSS and CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/green.css">
+    <link rel="stylesheet" href="css/user.css">
 
-    <title>Access Control</title>
+    <title>Access Control - User</title>
   </head>
-    
+  <body>
+
     <h1>Welcome to HKI</h1>
     <p>Access Control</p>
-    
 
-    <?php
-      // Welcome text with title and lastname
-      // echo 'Guten Morgen/Guten Tag/Schönen Abend Herr/Frau bla bla je nach Uhrzeit';
-      session_start();
-      $title = $_SESSION['title'];
-      $lastname = $_SESSION['lastname'];
-      echo 'Herzlich willkommen ' . ' ' . $title . ' ' . $lastname . '.';
-    ?>
+    <!-- table to edit user -->
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>number</th>
+            <th>title</th>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>authorized</th>
+            <th>created_at</th>
+            <th>updated_at</th>
+        </tr>
+        
+            <?php
+                require("inc/include.php");
+                $stmt = $con->prepare("SELECT * FROM employee");
+                $stmt->execute();
 
-    <!-- Back to AC-Page Button (HIDDEN style tag) -->
-    </div>
-      <div class="col">
-      <a href="../index.php"><button type="button" style=display:none class="hidden" href='#home'>Back to AC-Page</button>
-    </div>
+                while ($row = $stmt->fetch()){
+                    ?>
+                    <tr>
+                        <td><?php echo $row["lastname"] ?></td>
+                    </tr>
+            <?php
+                }            
+            ?>
+    </table>
+
+
+  
+
 
     <!-- jQuery, Bootstrap JS -->
     <!-- JavaScript -->

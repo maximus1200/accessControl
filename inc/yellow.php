@@ -17,7 +17,6 @@
     
     <h1>Welcome to HKI</h1>
     <p>Access Control</p>
-    <p>Yellow</p>
 
     <?php
       // Text with title and lastname
