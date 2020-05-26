@@ -28,24 +28,31 @@
             <th>created_at</th>
             <th>updated_at</th>
         </tr>
-        
+
             <?php
                 require("inc/include.php");
-                $stmt = $con->prepare("SELECT * FROM employee");
-                $stmt->execute();
-
-                while ($row = $stmt->fetch()){
+                $stmt = $con->query("SELECT * FROM employee");
+                // var_dump is for data check in DB (how much data)
+                // var_dump($stmt);
+                while ($row = $stmt->fetch_assoc()){
                     ?>
                     <tr>
+                        <td><?php echo $row["ID"] ?></td>
+                        <td><?php echo $row["number"] ?></td>
+                        <td><?php echo $row["title"] ?></td>
+                        <td><?php echo $row["firstname"] ?></td>
                         <td><?php echo $row["lastname"] ?></td>
+                        <td><?php echo $row["authorized"] ?></td>
+                        <td><?php echo $row["created_at"] ?></td>
+                        <td><?php echo $row["updated_at"] ?></td>
                     </tr>
             <?php
-                }            
+                }
             ?>
     </table>
 
 
-  
+
 
 
     <!-- jQuery, Bootstrap JS -->

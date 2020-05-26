@@ -15,7 +15,7 @@
   </head>
   <!-- onLoad: when you load the page the cursor is in the right field -->
   <body onLoad="this.document.getElementById('employee_number').focus();">
-    
+
     <h1 id="home">Welcome to HKI</h1>
     <p>Access Control</p>
 
@@ -31,9 +31,6 @@
         <button type="submit" name="send_button" class="hidden_button">Send</button>
       </div>
     </form>
-
-
-
 
 
     <!-- jQuery, Bootstrap JS -->
