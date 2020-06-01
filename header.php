@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -12,7 +12,7 @@
     <title>Header</title>
   </head>
   <body>
-  
+
     <!-- Header -->
     <header>
       <nav>
@@ -24,21 +24,21 @@
           <li><a href='#'>Portfolio</a></li>
           <li><a href='#'>About me</a></li>
           <li><a href='#'>Contact</a></li>
-          <li><a href='#'>Home</a></li>      
+          <li><a href='#'>Home</a></li>
         </ul>
         <div>
           <form action='includes/login.inc.php' method='post'>
             <input type='text' name='mailuid' placeholder='Username/E-mail'>
             <input type='password' name='pwd' placeholder='Password'>
-            <button type='submit' name='login-submit'>Login</button>      
+            <button type='submit' name='login-submit'>Login</button>
           </form>
           <a href='singup.php'>Singup</a>
           <form action='includes/logout.inc.php' method='post'>
-            <button type='submit' name='logout-submit'>Logout</button>      
+            <button type='submit' name='logout-submit'>Logout</button>
           </form>
         </div>
       </nav>
-    </header>  
+    </header>
 
 
     <!-- jQuery, Bootstrap JS -->
