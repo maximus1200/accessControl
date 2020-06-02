@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,12 +18,20 @@
             <li><a href="index.php">Home</a></li>
           </ul>
           <div class="nav-login">
-            <form>
-              <input type="text" name="uid" placeholder="Username or Email">
-              <input type="password" name="pwd" placeholder="Password">
-              <button type="submit" name="submit">Login</button>
-            </form>
-            <a href="signup_test.php">Sign up</a>
+            <?php
+            if (isset($_SESSION['u_id'])) {
+              echo '<form action="inc/logout.php" method="POST">
+                      <button type="submit" name="submit">Logout</button>
+                    </form>';
+            } else {
+                echo '<form action="inc/login.php" method="POST">
+                        <input type="text" name="uid" placeholder="Username or Email">
+                        <input type="password" name="pwd" placeholder="Password">
+                        <button type="submit" name="submit">Login</button>
+                      </form>
+                      <a href="signup_test.php">Sign up</a>';
+            }
+            ?>
           </div>
         </div>
       </nav>
