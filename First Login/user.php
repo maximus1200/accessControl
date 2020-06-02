@@ -16,7 +16,7 @@
     <h1>Welcome to HKI</h1>
     <p>Access Control</p>
 
-    <!-- table to edit user -->
+    <!-- table to edit users -->
     <table>
         <tr>
             <th>ID</th>
