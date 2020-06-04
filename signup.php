@@ -1,5 +1,5 @@
 <?php
-  include_once 'header_test.php';
+  include_once 'header.php';
 ?>
     <section class="main-container">
       <div class="main-wrapper">
@@ -16,5 +16,5 @@
     </section>
 
 <?php
-  include_once 'footer_test.php';
+  include_once 'footer.php';
 ?>

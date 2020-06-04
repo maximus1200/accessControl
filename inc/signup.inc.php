@@ -2,7 +2,7 @@
 
 if (isset($_POST['submit'])) {
 
-  include_once 'include.php';
+  include_once 'include.inc.php';
 
   $first = mysqli_real_escape_string($con, $_POST['first']);
   $last = mysqli_real_escape_string($con, $_POST['last']);
@@ -13,17 +13,17 @@ if (isset($_POST['submit'])) {
   // Error handlers
   // Check for empty fields
   if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {
-    header("Location: ../signup_test.php?signup=empty");
+    header("Location: ../signup.php?signup=empty");
     exit();
   } else {
       // Check if input characters are valid
       if (!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last)) {
-        header("Location: ../signup_test.php?signup=invalid");
+        header("Location: ../signup.php?signup=invalid");
         exit();
       } else {
         // Check if Email is valid
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          header("Location: ../signup_test.php?signup=email");
+          header("Location: ../signup.php?signup=email");
           exit();
         } else {
           $sql = "SELECT * FROM user WHERE ID='$uid'";
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
           $resultCheck = mysqli_num_rows($result);
 
           if ($resultCheck > 0) {
-            header("Location: ../signup_test.php?signup=usertaken");
+            header("Location: ../signup.php?signup=usertaken");
             exit();
           } else {
             // Hasching the Password
@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
             // Insert the user into the database
             $sql = "INSERT INTO user (firstname, lastname, email, uid, pwd) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd');";
             mysqli_query($con, $sql);
-            header("Location: ../signup_test.php?signup=success");
+            header("Location: ../signup.php?signup=success");
             exit();
           }
         }

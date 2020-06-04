@@ -1,6 +1,6 @@
 <?php
     /* Connection to DB */
-    include_once 'include.php';
+    include_once 'include.inc.php';
 
     /* POST input field */
     $employee_number = $_POST['employee_number'];
@@ -18,7 +18,7 @@
 
     }
 
-    /* Copare the data from the transponder/chip with data from DB and start session (green, yellow and red) 
+    /* Copare the data from the transponder/chip with data from DB and start session (green, yellow and red)
         - Green page: Right of access for this employee in this area
         - Yellow page: No right of access for this employee in this area
         - Red page: Number not correct, transponder unknown
