@@ -252,3 +252,11 @@ header .nav-login a {
 input {
   outline: none;
 }
+
+.welcome h1 {
+  text-align: center;
+}
+
+.welcome p {
+  text-align: center;
+}

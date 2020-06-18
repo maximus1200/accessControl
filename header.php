@@ -44,15 +44,18 @@
       </nav>
     </header>
 
-    <h1 id="home">Welcome to HKI</h1>
-    <p>Access Control</p>
+    <!-- Welcome Text -->
+    <div class="welcome">
+      <h1 id="home">Welcome to HKI</h1>
+      <p>Access Control</p>
+    </div>
 
     <!-- input field for transponder -->
     <form action="inc/transponder_check.php" method="POST">
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="validationServer01">Employee Number:</label>
-          <input type="text" name="employee_number" class="form-control" id="employee_number" placeholder="Please hold transponder to the reader" required>
+          <input type="password" name="employee_number" class="form-control" id="employee_number" placeholder="Please hold transponder to the reader" required>
         </div>
       </div>
       </div>
